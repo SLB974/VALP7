@@ -12,8 +12,8 @@ class Parser:
     
     def clean_string(self):
         """ remove accents, upper and punctuation
-            compare to stop_words reference and remove items
-            split in list"""
+            and split into list
+            compare to stop_words reference and remove found items"""
         
         cleaned = unidecode(self.user_query).lower()
         cleaned = re.compile('\w+').findall(cleaned)
